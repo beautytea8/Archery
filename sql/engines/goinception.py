@@ -212,7 +212,7 @@ class GoInceptionEngine(EngineBase):
         if print_info.get("errlevel") == 0 and print_info.get("errmsg") is None:
             return json.loads(print_info["query_tree"])
         else:
-            raise RuntimeError(f'Inception Error: print_info.get("errmsg")')
+            raise RuntimeError(f'Inception Error: ${print_info.get("errmsg")}')
 
     def get_rollback(self, workflow):
         """
